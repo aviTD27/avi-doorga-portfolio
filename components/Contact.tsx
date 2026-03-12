@@ -37,10 +37,10 @@ export default function Contact() {
         {/* Email */}
         <motion.a
           whileHover={{ scale: 1.05 }}
-          href="mailto:your-email@example.com"
+          href="mailto:avi.doorga27@gmail.com"
           className="inline-block px-6 py-3 mb-6 rounded-lg bg-cyan-500/20 border border-cyan-400/40 text-cyan-300 hover:bg-cyan-500/30 transition-all duration-200 shadow-[0_0_12px_rgba(56,189,248,0.4)]"
         >
-          your-email@example.com
+          avi.doorga27@gmail.com
         </motion.a>
 
         {/* Social Icons */}

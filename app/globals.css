@@ -1,26 +1,37 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Neon glow utilities */
+.neon-border {
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  box-shadow:
+    0 0 12px rgba(56, 189, 248, 0.25),
+    inset 0 0 12px rgba(56, 189, 248, 0.15);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.neon-border-hover:hover {
+  border-color: #38bdf8;
+  box-shadow:
+    0 0 22px rgba(56, 189, 248, 0.55),
+    inset 0 0 22px rgba(56, 189, 248, 0.35);
+  transform: translateY(-6px);
+  transition: 0.25s ease;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Glass effect */
+.glass {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(10px);
+}
+
+/* Section title glow */
+.section-title {
+  color: #38bdf8;
+  text-shadow: 0 0 12px rgba(56, 189, 248, 0.8);
 }

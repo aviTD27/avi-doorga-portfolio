@@ -24,38 +24,53 @@ export default function About() {
         viewport={{ once: true }}
         className="glass neon-border p-8 rounded-xl max-w-3xl mx-auto"
       >
-        <p className="text-slate-300 text-lg leading-relaxed mb-6">
-          I’m <span className="text-cyan-300 font-semibold">Trithikraj Doorga (Avi)</span>, 
-          a full‑stack software engineer with over 4 years of experience building 
-          scalable, production‑ready applications. I specialize in 
-          <span className="text-cyan-300"> Java (Spring Boot)</span>, 
-          <span className="text-cyan-300"> Angular</span>, and modern web technologies — 
-          with a strong focus on clean architecture, performance, and maintainability.
+        {/* Hook */}
+        <p className="text-slate-200 text-xl leading-relaxed mb-6">
+          I am <span className="text-cyan-300 font-semibold">Trithikraj Doorga (Avi)</span>,
+          a full-stack developer who has already shipped production code on an
+          enterprise platform, and I am ready to do it again for your team.
         </p>
 
+        {/* Professional experience */}
         <p className="text-slate-300 text-lg leading-relaxed mb-6">
-          I’m currently pursuing an 
-          <span className="text-cyan-300"> MSc in Computer Science (Software Engineering)</span> 
-          at EPITA, France, after graduating with a 
-          <span className="text-cyan-300"> First Class Honors</span> degree in Applied Computing. 
-          My professional journey includes working at 
-          <span className="text-cyan-300"> Infosys</span> on the Renault project, where I contributed 
-          to enterprise‑level systems, CI/CD pipelines, database migrations, and Agile delivery.
+          I bring <span className="text-cyan-300">3+ years of experience</span>, including
+          two years at <span className="text-cyan-300">Infosys on the Renault platform</span>,
+          where I built business features in
+          <span className="text-cyan-300"> Java Spring Boot and Angular/React</span>, ran
+          PostgreSQL and Liquibase data migrations, maintained GitLab CI/CD pipelines, and
+          validated releases across Dev, QA and UAT. I know what it takes to deliver inside a
+          large Agile organisation: clear communication with Product Owners, reliable code,
+          and fixing issues fast when they reach production.
         </p>
 
+        {/* Academic results */}
         <p className="text-slate-300 text-lg leading-relaxed mb-6">
-          Beyond development, I enjoy collaborating with cross‑functional teams, simplifying 
-          complex problems, and delivering solutions that balance technical quality with 
-          business value. I’m also certified as a 
-          <span className="text-cyan-300"> Scrum Developer (CSD)</span> and 
-          <span className="text-cyan-300"> Scrum Product Owner (CSPO)</span>, which strengthens 
-          my ability to work in fast‑paced Agile environments.
+          I have completed my
+          <span className="text-cyan-300"> MSc in Computer Science (Software Engineering) at EPITA</span>,
+          finishing <span className="text-cyan-300">3rd in my cohort</span>. My final-year
+          project, <span className="text-cyan-300">Action Learning Cockpit</span>, a
+          multi-service Spring Boot and React platform with real-time dashboards, was
+          <span className="text-cyan-300"> ranked 1st</span>. This follows a
+          <span className="text-cyan-300"> First Class Honours</span> degree in Applied
+          Computing from the University of Mauritius.
         </p>
 
+        {/* What I'm looking for */}
+        <p className="text-slate-300 text-lg leading-relaxed mb-6">
+          The last step to be awarded my Master&apos;s degree is a
+          <span className="text-cyan-300"> 6-month end-of-studies internship (stage de fin d&apos;études)</span>.
+          I am <span className="text-cyan-300">available immediately</span>, based in the
+          Paris area, and looking to join a backend or full-stack team where I can contribute
+          from the first week, with the goal of continuing in a
+          <span className="text-cyan-300"> full-time role (CDI)</span>.
+        </p>
+
+        {/* Closing */}
         <p className="text-slate-300 text-lg leading-relaxed">
-          I’m always open to new opportunities, collaborations, and meaningful conversations — 
-          whether it’s about software engineering, product thinking, or building impactful 
-          digital experiences.
+          Certified <span className="text-cyan-300">Scrum Developer (CSD)</span> and
+          <span className="text-cyan-300"> Scrum Product Owner (CSPO)</span>, fluent in
+          English and French, I work as comfortably with business teams as with code.
+          If you are hiring, I would be glad to talk.
         </p>
       </motion.div>
     </section>

@@ -5,10 +5,13 @@ import Image from "next/image";
 import { SiGithub, SiGmail } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa";
 import { FiMapPin, FiDownload } from "react-icons/fi";
+import { useLanguage } from "./LanguageProvider";
 
 const LINKEDIN_URL = "https://www.linkedin.com/in/trithikraj-doorga-331885191/";
 
 export default function Hero() {
+  const { t } = useLanguage();
+
   return (
     <section
       id="hero"
@@ -37,7 +40,7 @@ export default function Hero() {
         transition={{ duration: 0.7 }}
         className="text-4xl md:text-5xl font-bold text-white mb-4"
       >
-        Hi, I’m <span className="text-cyan-300">Avi Doorga</span>
+        {t.hero.greeting} <span className="text-cyan-300">Avi Doorga</span>
       </motion.h1>
 
       {/* Subtitle */}
@@ -47,7 +50,7 @@ export default function Hero() {
         transition={{ duration: 0.8 }}
         className="text-xl md:text-2xl text-slate-300 mb-3"
       >
-        Full‑Stack Software Engineer • Java Spring Boot • Angular / React
+        {t.hero.subtitle}
       </motion.h2>
 
       {/* Location */}
@@ -58,7 +61,7 @@ export default function Hero() {
         className="flex items-center gap-2 text-slate-400 mb-6"
       >
         <FiMapPin className="text-cyan-300" />
-        Paris area, France
+        {t.hero.location}
       </motion.p>
 
       {/* Description */}
@@ -68,11 +71,7 @@ export default function Hero() {
         transition={{ duration: 0.9 }}
         className="text-slate-400 max-w-2xl text-lg leading-relaxed mb-8"
       >
-        Full‑stack developer with 3+ years of experience building production
-        applications with Java Spring Boot, Angular/React, PostgreSQL and CI/CD.
-        MSc Software Engineering at EPITA (ranked 3rd in cohort). Available
-        immediately for a 6‑month end‑of‑studies internship (stage de fin
-        d&apos;études), followed by a full‑time role (CDI).
+        {t.hero.description}
       </motion.p>
 
       {/* CTA Buttons */}
@@ -87,14 +86,13 @@ export default function Hero() {
           href="#projects"
           className="px-8 py-3 rounded-lg bg-cyan-500/20 border border-cyan-400/40 text-cyan-300 text-lg hover:bg-cyan-500/30 transition-all duration-200 shadow-[0_0_12px_rgba(56,189,248,0.4)]"
         >
-          View My Work
+          {t.hero.viewWork}
         </motion.a>
 
         <motion.a
           whileHover={{ scale: 1.05 }}
           href="/Avi_Doorga_CV_EN.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
+          download="Avi_Doorga_CV_EN.pdf"
           className="flex items-center gap-2 px-6 py-3 rounded-lg border border-slate-600 text-slate-300 text-lg hover:border-cyan-400 hover:text-cyan-300 transition-all duration-200"
         >
           <FiDownload /> CV (EN)
@@ -103,8 +101,7 @@ export default function Hero() {
         <motion.a
           whileHover={{ scale: 1.05 }}
           href="/Avi_Doorga_CV_FR.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
+          download="Avi_Doorga_CV_FR.pdf"
           className="flex items-center gap-2 px-6 py-3 rounded-lg border border-slate-600 text-slate-300 text-lg hover:border-cyan-400 hover:text-cyan-300 transition-all duration-200"
         >
           <FiDownload /> CV (FR)

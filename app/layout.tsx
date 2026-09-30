@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { LanguageProvider } from "../components/LanguageProvider";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://avidoorga.com"),
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
     "Avi Doorga",
     "Trithikraj Doorga",
     "Full-Stack Developer",
+    "Développeur Full-Stack",
     "Java Spring Boot",
     "Angular",
     "React",
@@ -27,6 +29,7 @@ export const metadata: Metadata = {
     siteName: "Avi Doorga",
     images: ["/AviPic.jpeg"],
     locale: "en_US",
+    alternateLocale: ["fr_FR"],
     type: "website",
   },
 };
@@ -35,18 +38,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className="bg-slate-950 text-slate-200 h-screen overflow-hidden">
+        <LanguageProvider>
 
-        {/* FIXED HEADER */}
-        <Header />
+          {/* FIXED HEADER */}
+          <Header />
 
-        {/* SCROLLABLE MIDDLE CONTENT */}
-        <main className="pt-20 pb-20 h-full overflow-y-auto">
-          {children}
-        </main>
+          {/* SCROLLABLE MIDDLE CONTENT */}
+          <main className="pt-20 pb-20 h-full overflow-y-auto">
+            {children}
+          </main>
 
-        {/* FIXED FOOTER */}
-        <Footer />
+          {/* FIXED FOOTER */}
+          <Footer />
 
+        </LanguageProvider>
       </body>
     </html>
   );

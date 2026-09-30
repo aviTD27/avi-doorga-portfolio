@@ -1,102 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useLanguage } from "./LanguageProvider";
 
 export default function Skills() {
-  const skillCategories = [
-    {
-      title: "Programming & Frameworks",
-      skills: [
-        "Java",
-        "Spring Boot",
-        "REST APIs",
-        "Angular",
-        "React",
-        "TypeScript",
-        "Next.js",
-        "Tailwind CSS",
-        "Node.js",
-        "HTML5",
-        "CSS",
-        ".NET (WPF, XAML)",
-        "C#",
-        "Python",
-        "Gradle",
-        "Maven",
-      ],
-    },
-    {
-      title: "Databases",
-      skills: ["PostgreSQL", "MySQL", "Firebase", "SQL Query Optimization", "Liquibase"],
-    },
-    {
-      title: "DevOps & Cloud",
-      skills: [
-        "Git",
-        "GitLab CI/CD",
-        "GitHub Actions",
-        "Docker",
-        "PowerShell Scripting",
-        "AWS",
-        "GCP",
-      ],
-    },
-    {
-      title: "Methodologies",
-      skills: [
-        "Agile (Scrum)",
-        "Sprint Planning",
-        "User Stories",
-        "Retrospectives",
-        "Backlog Refinement",
-        "Requirement Gathering",
-      ],
-    },
-    {
-      title: "Testing & Quality",
-      skills: [
-        "Integration Testing",
-        "Unit Testing",
-        "Test Case Design",
-        "Defect Tracking",
-        "Log Analysis",
-        "Dev / QA / UAT Validation",
-      ],
-    },
-    {
-      title: "Tools & Collaboration",
-      skills: ["Jira", "Confluence", "VS Code", "IntelliJ IDEA", "DBeaver", "PgAdmin"],
-    },
-    {
-      title: "Design & Documentation",
-      skills: ["Figma", "Mermaid", "Draw.io", "Eraser", "Technical Documentation", "Reporting"],
-    },
-    {
-      title: "Certifications",
-      skills: ["Certified Scrum Developer (CSD)", "Certified Scrum Product Owner (CSPO)"],
-    },
-    {
-      title: "Languages",
-      skills: [
-        "English (Fluent)",
-        "French (Fluent)",
-        "Mauritian Creole (Native)",
-        "Hindi (Intermediate)",
-        "Bhojpuri (Intermediate)",
-      ],
-    },
-    {
-      title: "Soft Skills",
-      skills: [
-        "Problem Solving & Analytical Thinking",
-        "Effective Communication",
-        "Team Collaboration & Leadership",
-        "Adaptability & Continuous Learning",
-        "Time Management & Prioritization",
-        "Presentation Skills",
-      ],
-    },
-  ];
+  const { t } = useLanguage();
 
   return (
     <section id="skills" className="scroll-mt-24">
@@ -107,11 +15,11 @@ export default function Skills() {
         viewport={{ once: true }}
         className="text-3xl font-bold section-title mb-6"
       >
-        Skills
+        {t.skills.title}
       </motion.h2>
 
       <div className="grid md:grid-cols-2 gap-8">
-        {skillCategories.map((category, index) => (
+        {t.skills.categories.map((category, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 25 }}

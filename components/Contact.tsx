@@ -4,10 +4,13 @@ import { motion } from "framer-motion";
 import { SiGithub, SiGmail } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa";
 import { FiMapPin, FiDownload } from "react-icons/fi";
+import { useLanguage } from "./LanguageProvider";
 
 const LINKEDIN_URL = "https://www.linkedin.com/in/trithikraj-doorga-331885191/";
 
 export default function Contact() {
+  const { t } = useLanguage();
+
   return (
     <section id="contact" className="scroll-mt-24 pb-10">
       {/* Section Title */}
@@ -18,7 +21,7 @@ export default function Contact() {
         viewport={{ once: true }}
         className="text-3xl font-bold section-title mb-10"
       >
-        Contact
+        {t.contact.title}
       </motion.h2>
 
       {/* Contact Card */}
@@ -30,14 +33,12 @@ export default function Contact() {
         className="glass neon-border p-8 rounded-xl max-w-xl mx-auto text-center"
       >
         <p className="text-slate-300 text-lg mb-4 leading-relaxed">
-          Available immediately for an end-of-studies internship, followed by a
-          full-time role (CDI). Whether it is an opportunity, a collaboration or
-          just a hello, I’d love to connect.
+          {t.contact.intro}
         </p>
 
         <p className="flex items-center justify-center gap-2 text-slate-400 mb-6">
           <FiMapPin className="text-cyan-300" />
-          Paris area, France
+          {t.contact.location}
         </p>
 
         {/* Email */}
@@ -53,16 +54,14 @@ export default function Contact() {
         <div className="flex justify-center gap-4 mb-6">
           <a
             href="/Avi_Doorga_CV_EN.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
+            download="Avi_Doorga_CV_EN.pdf"
             className="flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-600 text-slate-300 hover:border-cyan-400 hover:text-cyan-300 transition-all duration-200"
           >
             <FiDownload /> CV (EN)
           </a>
           <a
             href="/Avi_Doorga_CV_FR.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
+            download="Avi_Doorga_CV_FR.pdf"
             className="flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-600 text-slate-300 hover:border-cyan-400 hover:text-cyan-300 transition-all duration-200"
           >
             <FiDownload /> CV (FR)

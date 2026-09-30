@@ -1,37 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useLanguage } from "./LanguageProvider";
 
 export default function Education() {
-  const education = [
-    {
-      degree: "MSc Computer Science — Software Engineering",
-      school: "EPITA",
-      period: "2025 – 2026",
-      location: "France",
-      distinction: "Ranked 3rd in cohort",
-      details: [
-        "Coursework completed; degree awarded upon end-of-studies internship",
-        "Final-year project Action Learning Cockpit ranked 1st in cohort",
-      ],
-    },
-    {
-      degree: "BSc (Hons) Applied Computing",
-      school: "University of Mauritius",
-      period: "2020 – 2023",
-      location: "Mauritius",
-      distinction: "First Class Honours",
-      details: [
-        "Built web, mobile and systems projects: PHP/MySQL restaurant management system and Android app in Java",
-        "Completed a software testing internship at Bank One alongside my studies",
-      ],
-    },
-  ];
-
-  const certifications = [
-    "Certified Scrum Developer (CSD)",
-    "Certified Scrum Product Owner (CSPO)",
-  ];
+  const { t } = useLanguage();
 
   return (
     <section id="education" className="scroll-mt-24">
@@ -43,11 +16,11 @@ export default function Education() {
         viewport={{ once: true }}
         className="text-3xl font-bold section-title mb-6"
       >
-        Education
+        {t.education.title}
       </motion.h2>
 
       <div className="grid md:grid-cols-2 gap-8">
-        {education.map((edu, index) => (
+        {t.education.items.map((edu, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 25 }}
@@ -85,9 +58,11 @@ export default function Education() {
         viewport={{ once: true }}
         className="glass neon-border p-6 rounded-xl mt-8"
       >
-        <h3 className="text-xl font-semibold text-white mb-4">Certifications</h3>
+        <h3 className="text-xl font-semibold text-white mb-4">
+          {t.education.certificationsTitle}
+        </h3>
         <div className="flex flex-wrap gap-2">
-          {certifications.map((c, i) => (
+          {t.education.certifications.map((c, i) => (
             <span
               key={i}
               className="px-3 py-1 text-xs rounded-md bg-cyan-500/10 border border-cyan-400/30 text-cyan-300"

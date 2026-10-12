@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://avidoorga.com"),
   title: "Avi Doorga — Full-Stack Developer (Java Spring Boot, Angular, React)",
   description:
-    "Avi Doorga (Trithikraj Doorga), full-stack developer in the Paris area with 3+ years of experience in Java Spring Boot, Angular/React, PostgreSQL and CI/CD. MSc Software Engineering at EPITA. Available for an end-of-studies internship followed by a CDI.",
+    "Avi Doorga (Trithikraj Doorga), full-stack developer in the Paris area with 3+ years of experience in Java Spring Boot, Angular/React, PostgreSQL and CI/CD. MSc Software Engineering at EPITA. Available immediately for a CDI, with the first 6 months as an end-of-studies internship.",
   keywords: [
     "Avi Doorga",
     "Trithikraj Doorga",
@@ -18,13 +18,14 @@ export const metadata: Metadata = {
     "Angular",
     "React",
     "EPITA",
+    "CDI",
     "stage de fin d'études",
     "Paris",
   ],
   openGraph: {
     title: "Avi Doorga — Full-Stack Developer",
     description:
-      "Java Spring Boot • Angular / React • PostgreSQL • CI/CD. Available for an end-of-studies internship followed by a CDI.",
+      "Java Spring Boot • Angular / React • PostgreSQL • CI/CD. Available immediately for a CDI (first 6 months as end-of-studies internship).",
     url: "https://avidoorga.com",
     siteName: "Avi Doorga",
     images: ["/AviPic.jpeg"],

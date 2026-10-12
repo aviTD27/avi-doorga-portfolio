@@ -104,7 +104,7 @@ const en: Translation = {
     subtitle: "Full‑Stack Software Engineer • Java Spring Boot • Angular / React",
     location: "Paris area, France",
     description:
-      "Full‑stack developer with 3+ years of experience building production applications with Java Spring Boot, Angular/React, PostgreSQL and CI/CD. MSc Software Engineering coursework completed at EPITA (ranked 3rd in cohort). Available immediately for a 6‑month end‑of‑studies internship (stage de fin d'études) to validate my degree, followed by a CDI.",
+      "Full‑stack developer with 3+ years of experience building production applications with Java Spring Boot, Angular/React, PostgreSQL and CI/CD. MSc Software Engineering coursework completed at EPITA (ranked 3rd in cohort). Available immediately for a CDI: the first 6 months can count as my end‑of‑studies internship, and my EPITA internship agreement is ready.",
     viewWork: "View My Work",
   },
 
@@ -114,7 +114,7 @@ const en: Translation = {
       "I am **Trithikraj Doorga (Avi)**, a full-stack developer who has already shipped production code on an enterprise platform, and I am ready to do it again for your team.",
       "I bring **3+ years of experience**, including two years at **Infosys on the Renault platform**, where I built business features in **Java Spring Boot and Angular/React**, ran PostgreSQL and Liquibase data migrations, maintained GitLab CI/CD pipelines, and validated releases across Dev, QA and UAT. I know what it takes to deliver inside a large Agile organisation: clear communication with Product Owners, reliable code, and fixing issues fast when they reach production.",
       "I have completed my **MSc in Computer Science (Software Engineering) at EPITA**, finishing **3rd in my cohort**. My final-year project, **Action Learning Cockpit**, a multi-service Spring Boot and React platform with real-time dashboards, was **ranked 1st**. This follows a **First Class Honours** degree in Applied Computing from the University of Mauritius.",
-      "The last step to be awarded my Master's degree is a **6-month end-of-studies internship (stage de fin d'études)**. I am **available immediately**, based in the Paris area, and looking to join a backend or full-stack team where I can contribute from the first week, with the goal of continuing in a **full-time role (CDI)**.",
+      "I am **available immediately for a CDI**. The first 6 months can serve as my **end-of-studies internship (stage de fin d'études)**, the last step to be awarded my Master's degree, and EPITA has already issued my internship agreement, so I can start right away. Based in the Paris area, I am looking to join a backend or full-stack team where I can contribute from the first week.",
       "Certified **Scrum Developer (CSD)** and **Scrum Product Owner (CSPO)**, fluent in English and French, I work as comfortably with business teams as with code. If you are hiring, I would be glad to talk.",
     ],
   },
@@ -448,7 +448,7 @@ const en: Translation = {
   contact: {
     title: "Contact",
     intro:
-      "Available immediately for an end-of-studies internship, followed by a full-time role (CDI). Whether it is an opportunity, a collaboration or just a hello, I’d love to connect.",
+      "Available immediately for a CDI, with the first 6 months as my end-of-studies internship (EPITA agreement ready). Whether it is an opportunity, a collaboration or just a hello, I’d love to connect.",
     location: "Paris area, France",
   },
 
@@ -472,7 +472,7 @@ const fr: Translation = {
     subtitle: "Ingénieur logiciel Full‑Stack • Java Spring Boot • Angular / React",
     location: "Région parisienne, France",
     description:
-      "Développeur full‑stack avec plus de 3 ans d’expérience dans la création d’applications en production avec Java Spring Boot, Angular/React, PostgreSQL et CI/CD. Scolarité du MSc Software Engineering validée à l’EPITA (classé 3ᵉ de la promotion). Disponible immédiatement pour un stage de fin d’études de 6 mois afin de valider mon diplôme, suivi d’un CDI.",
+      "Développeur full‑stack avec plus de 3 ans d’expérience dans la création d’applications en production avec Java Spring Boot, Angular/React, PostgreSQL et CI/CD. Scolarité du MSc Software Engineering validée à l’EPITA (classé 3ᵉ de la promotion). Disponible immédiatement pour un CDI : les 6 premiers mois peuvent valoir stage de fin d’études, et ma convention de stage EPITA est prête.",
     viewWork: "Voir mes projets",
   },
 
@@ -482,7 +482,7 @@ const fr: Translation = {
       "Je suis **Trithikraj Doorga (Avi)**, développeur full‑stack ayant déjà livré du code en production sur une plateforme grand compte, et prêt à le refaire pour votre équipe.",
       "J’apporte **plus de 3 ans d’expérience**, dont deux ans chez **Infosys sur la plateforme Renault**, où j’ai développé des fonctionnalités métier en **Java Spring Boot et Angular/React**, mené des migrations de données PostgreSQL et Liquibase, maintenu des pipelines CI/CD GitLab et validé les livraisons sur les environnements Dev, QA et UAT. Je sais ce qu’exige la livraison au sein d’une grande organisation Agile : une communication claire avec les Product Owners, un code fiable et une résolution rapide des incidents en production.",
       "J’ai terminé la scolarité de mon **MSc Computer Science (Software Engineering) à l’EPITA**, en me classant **3ᵉ de ma promotion**. Mon projet de fin d’études, **Action Learning Cockpit**, une plateforme multi‑services Spring Boot et React avec tableaux de bord en temps réel, a été **classé 1er**. Ce parcours fait suite à un Bachelor en Applied Computing obtenu avec la **mention Très Bien (First Class Honours)** à l’University of Mauritius.",
-      "La dernière étape pour obtenir mon diplôme de Master est un **stage de fin d’études de 6 mois**. Je suis **disponible immédiatement**, basé en région parisienne, et je souhaite rejoindre une équipe backend ou full‑stack où je pourrai contribuer dès la première semaine, avec l’objectif de poursuivre en **CDI**.",
+      "Je suis **disponible immédiatement pour un CDI**. Les 6 premiers mois peuvent valoir **stage de fin d’études**, dernière étape pour obtenir mon diplôme de Master, et ma convention de stage EPITA est déjà prête : je peux donc démarrer tout de suite. Basé en région parisienne, je souhaite rejoindre une équipe backend ou full‑stack où je pourrai contribuer dès la première semaine.",
       "Certifié **Scrum Developer (CSD)** et **Scrum Product Owner (CSPO)**, bilingue anglais et français, je suis aussi à l’aise avec les équipes métier qu’avec le code. Si vous recrutez, je serai ravi d’échanger.",
     ],
   },
@@ -816,7 +816,7 @@ const fr: Translation = {
   contact: {
     title: "Contact",
     intro:
-      "Disponible immédiatement pour un stage de fin d’études, suivi d’un CDI. Pour une opportunité, une collaboration ou simplement un bonjour, je serai ravi d’échanger.",
+      "Disponible immédiatement pour un CDI, avec les 6 premiers mois en stage de fin d’études (convention EPITA prête). Pour une opportunité, une collaboration ou simplement un bonjour, je serai ravi d’échanger.",
     location: "Région parisienne, France",
   },
 

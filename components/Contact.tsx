@@ -19,7 +19,7 @@ export default function Contact() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="text-3xl font-bold section-title mb-10"
+        className="text-3xl md:text-4xl font-bold section-title mb-10"
       >
         {t.contact.title}
       </motion.h2>
@@ -30,7 +30,7 @@ export default function Contact() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
         viewport={{ once: true }}
-        className="glass neon-border p-8 rounded-xl max-w-xl mx-auto text-center"
+        className="card p-8 md:p-12 max-w-2xl mx-auto text-center bg-gradient-to-br from-cyan-400/10 to-violet-500/10"
       >
         <p className="text-slate-300 text-lg mb-4 leading-relaxed">
           {t.contact.intro}
@@ -45,7 +45,7 @@ export default function Contact() {
         <motion.a
           whileHover={{ scale: 1.05 }}
           href="mailto:avi.doorga27@gmail.com"
-          className="inline-block px-6 py-3 mb-6 rounded-lg bg-cyan-500/20 border border-cyan-400/40 text-cyan-300 hover:bg-cyan-500/30 transition-all duration-200 shadow-[0_0_12px_rgba(56,189,248,0.4)]"
+          className="inline-block px-7 py-3 mb-6 rounded-xl bg-cyan-400 text-slate-950 font-semibold hover:bg-cyan-300 transition shadow-[0_8px_30px_-8px_rgba(56,189,248,0.7)]"
         >
           avi.doorga27@gmail.com
         </motion.a>

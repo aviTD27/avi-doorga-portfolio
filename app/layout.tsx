@@ -1,5 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { LanguageProvider } from "../components/LanguageProvider";
@@ -35,23 +36,16 @@ export const metadata: Metadata = {
   },
 };
 
+const inter = Inter({ subsets: ["latin"] });
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="bg-slate-950 text-slate-200 h-screen overflow-hidden">
+      <body className={`${inter.className} text-slate-200 antialiased`}>
         <LanguageProvider>
-
-          {/* FIXED HEADER */}
           <Header />
-
-          {/* SCROLLABLE MIDDLE CONTENT */}
-          <main className="pt-20 pb-20 h-full overflow-y-auto">
-            {children}
-          </main>
-
-          {/* FIXED FOOTER */}
+          <main className="pt-16 px-6">{children}</main>
           <Footer />
-
         </LanguageProvider>
       </body>
     </html>

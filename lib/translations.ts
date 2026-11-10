@@ -6,6 +6,7 @@ export type Project = {
   description: string;
   tech: string[];
   github?: string;
+  githubBackend?: string;
   demo?: string;
   features?: string[];
   highlights?: string[];
@@ -54,6 +55,10 @@ export type Translation = {
   about: {
     title: string;
     paragraphs: string[];
+  };
+  interests: {
+    title: string;
+    items: { icon: "powerlifting" | "football" | "aviation"; title: string; stat?: string; description: string }[];
   };
   education: {
     title: string;
@@ -119,6 +124,31 @@ const en: Translation = {
     ],
   },
 
+  interests: {
+    title: "Beyond Code",
+    items: [
+      {
+        icon: "powerlifting",
+        title: "Powerlifting",
+        stat: "460 kg SBD total • 2021",
+        description:
+          "Reaching this total took more than 2–3 years of hard work: patience, consistency and progressive overload, the same approach I bring to learning new technologies.",
+      },
+      {
+        icon: "football",
+        title: "Football",
+        description:
+          "I play as a defender: I work for the team and defend, always. Communication, trust and putting the collective result first, on the pitch and in an Agile team.",
+      },
+      {
+        icon: "aviation",
+        title: "Aviation",
+        description:
+          "A lifelong aviation enthusiast, which led me to build AvGeek, my aviation web application.",
+      },
+    ],
+  },
+
   education: {
     title: "Education",
     certificationsTitle: "Certifications",
@@ -164,8 +194,9 @@ const en: Translation = {
         description:
           "A multi-service academic platform that automates Action Learning workflows, analyses student reflections, and gives students and supervisors real-time dashboards across multiple universities.",
         tech: ["Java", "Spring Boot", "React", "TypeScript", "PostgreSQL", "REST APIs"],
-        // github: "https://github.com/aviTD27/...",
-        // demo: "https://...",
+        github: "https://github.com/aviTD27/action-learning-cockpit-frontend",
+        githubBackend: "https://github.com/aviTD27/Action_Learning_Cockpit_Backend",
+        demo: "https://action-learning-cockpit-frontend-five.vercel.app/",
         features: [
           "Automated Action Learning workflows for students and supervisors",
           "Reflection analysis to follow student progress",
@@ -177,28 +208,6 @@ const en: Translation = {
           "Ranked 1st in cohort at EPITA",
           "End-to-end full-stack delivery: backend services, database design and React frontend",
           "Built around real academic users and workflows",
-        ],
-      },
-      {
-        title: "TaskFlow — AI-Driven Task Management App",
-        description:
-          "A collaborative task management web app built end‑to‑end using a spec‑first, AI‑driven development workflow — starting from a written vision document and MoSCoW‑prioritized user stories before writing any code. Features email authentication, real‑time data, and a clean task dashboard.",
-        tech: ["Next.js 14", "TypeScript", "Tailwind CSS", "Firebase Auth", "Firestore", "Vercel"],
-        github: "https://github.com/aviTD27/taskflow-aidd",
-        demo: "https://taskflow-aidd-eta.vercel.app",
-        features: [
-          "Email/password authentication with Firebase Auth",
-          "Create tasks with title, description, priority, and due date",
-          "Task list with sorting and priority filters",
-          "Edit, delete, and mark tasks as completed",
-          "Real‑time persistence with Firestore (per‑user task collection)",
-          "App Router architecture with Server and Client Components",
-        ],
-        highlights: [
-          "Practiced AI‑assisted, spec‑first development: vision doc + MoSCoW user stories before implementation",
-          "Deployed on Vercel with continuous deployment from GitHub",
-          "Demonstrates full‑stack skills beyond the Java/Spring stack: Next.js, Firebase, Firestore",
-          "Clean architecture separating auth context, data layer, and UI components",
         ],
       },
       {
@@ -243,44 +252,6 @@ const en: Translation = {
         ],
       },
       {
-        title: "Advanced C — Student Management System",
-        description:
-          "A console-based student management system built in C, featuring CRUD operations, file handling, data validation, and structured record management.",
-        tech: ["C", "File Handling", "Structs", "Pointers", "GCC"],
-        github: "https://github.com/aviTD27/AdvancedC_StudentManagementSystem",
-        features: [
-          "Add, edit, delete, and search student records",
-          "Persistent storage using text file handling",
-          "Tabular console output with sorting and filtering",
-          "Input validation for clean and consistent data",
-          "Modular code structure using functions and structs",
-        ],
-        highlights: [
-          "Strong fundamentals in C programming and low-level logic",
-          "Persistent storage implemented with file I/O",
-          "Fully functional CRUD system in pure C",
-        ],
-      },
-      {
-        title: "Millennium Palace — Restaurant Management System",
-        description:
-          "A full‑stack restaurant management system built using PHP, HTML, CSS, and MySQL. It handles menu management, order processing, table assignment, billing, and admin operations.",
-        tech: ["PHP", "HTML", "CSS", "MySQL", "XAMPP", "phpMyAdmin"],
-        github: "https://github.com/aviTD27/2012319_Millenium_Palace",
-        features: [
-          "Dynamic menu display with categories and pricing",
-          "Order placement with automatic total calculation",
-          "Table assignment and availability tracking",
-          "Admin panel for managing menu items and categories",
-          "Billing system with itemized receipts and tax calculation",
-        ],
-        highlights: [
-          "Complete CRUD‑based restaurant workflow",
-          "Backend logic implemented with PHP and MySQL",
-          "Database schema designed for real‑world restaurant operations",
-        ],
-      },
-      {
         title: "Mobile Application — Android App Development",
         description:
           "A multi-screen Android application built using Java and XML, covering activities, intents, UI layouts, form handling, and navigation.",
@@ -296,6 +267,13 @@ const en: Translation = {
           "Applied core Android development principles",
           "Hands-on experience with Java and the Android SDK",
         ],
+      },
+      {
+        title: "Mother's Day App — React Application",
+        description:
+          "A small React application celebrating Mother's Day: a personalized message in a clean, centered layout styled with soft colors.",
+        tech: ["React", "JavaScript", "CSS"],
+        github: "https://github.com/aviTD27/Mother_Day_App",
       },
     ],
   },
@@ -487,6 +465,31 @@ const fr: Translation = {
     ],
   },
 
+  interests: {
+    title: "Au‑delà du code",
+    items: [
+      {
+        icon: "powerlifting",
+        title: "Force athlétique",
+        stat: "Total SBD 460 kg • 2021",
+        description:
+          "Ce total est le fruit de plus de 2 à 3 ans de travail acharné : patience, régularité et surcharge progressive, la même démarche que j’applique pour apprendre de nouvelles technologies.",
+      },
+      {
+        icon: "football",
+        title: "Football",
+        description:
+          "Je joue défenseur : je travaille pour l’équipe et je défends, toujours. Communication, confiance et résultat collectif avant tout, sur le terrain comme dans une équipe Agile.",
+      },
+      {
+        icon: "aviation",
+        title: "Aviation",
+        description:
+          "Passionné d’aviation depuis toujours, ce qui m’a mené à créer AvGeek, mon application web aéronautique.",
+      },
+    ],
+  },
+
   education: {
     title: "Formation",
     certificationsTitle: "Certifications",
@@ -532,8 +535,9 @@ const fr: Translation = {
         description:
           "Plateforme académique multi‑services qui automatise les workflows d’Action Learning, analyse les réflexions des étudiants et fournit aux étudiants et encadrants des tableaux de bord en temps réel, sur plusieurs universités.",
         tech: ["Java", "Spring Boot", "React", "TypeScript", "PostgreSQL", "REST APIs"],
-        // github: "https://github.com/aviTD27/...",
-        // demo: "https://...",
+        github: "https://github.com/aviTD27/action-learning-cockpit-frontend",
+        githubBackend: "https://github.com/aviTD27/Action_Learning_Cockpit_Backend",
+        demo: "https://action-learning-cockpit-frontend-five.vercel.app/",
         features: [
           "Automatisation des workflows d’Action Learning pour étudiants et encadrants",
           "Analyse des réflexions pour suivre la progression des étudiants",
@@ -545,28 +549,6 @@ const fr: Translation = {
           "Classé 1er de la promotion à l’EPITA",
           "Livraison full‑stack de bout en bout : services backend, conception de la base de données et frontend React",
           "Conçu autour d’utilisateurs et de workflows académiques réels",
-        ],
-      },
-      {
-        title: "TaskFlow — Application de gestion de tâches pilotée par l’IA",
-        description:
-          "Application web collaborative de gestion de tâches développée de bout en bout avec une approche spec‑first assistée par l’IA : document de vision et user stories priorisées MoSCoW avant toute ligne de code. Authentification par e‑mail, données en temps réel et tableau de bord clair.",
-        tech: ["Next.js 14", "TypeScript", "Tailwind CSS", "Firebase Auth", "Firestore", "Vercel"],
-        github: "https://github.com/aviTD27/taskflow-aidd",
-        demo: "https://taskflow-aidd-eta.vercel.app",
-        features: [
-          "Authentification e‑mail/mot de passe avec Firebase Auth",
-          "Création de tâches avec titre, description, priorité et échéance",
-          "Liste de tâches avec tri et filtres par priorité",
-          "Modification, suppression et validation des tâches",
-          "Persistance en temps réel avec Firestore (collection de tâches par utilisateur)",
-          "Architecture App Router avec Server et Client Components",
-        ],
-        highlights: [
-          "Développement spec‑first assisté par l’IA : document de vision et user stories MoSCoW avant l’implémentation",
-          "Déployé sur Vercel avec déploiement continu depuis GitHub",
-          "Compétences full‑stack au‑delà de Java/Spring : Next.js, Firebase, Firestore",
-          "Architecture claire séparant contexte d’authentification, couche de données et composants UI",
         ],
       },
       {
@@ -611,44 +593,6 @@ const fr: Translation = {
         ],
       },
       {
-        title: "Advanced C — Système de gestion d’étudiants",
-        description:
-          "Système de gestion d’étudiants en console développé en C, avec opérations CRUD, gestion de fichiers, validation des données et gestion structurée des enregistrements.",
-        tech: ["C", "Gestion de fichiers", "Structs", "Pointeurs", "GCC"],
-        github: "https://github.com/aviTD27/AdvancedC_StudentManagementSystem",
-        features: [
-          "Ajout, modification, suppression et recherche d’étudiants",
-          "Stockage persistant via fichiers texte",
-          "Affichage tabulaire en console avec tri et filtres",
-          "Validation des saisies pour des données propres et cohérentes",
-          "Code modulaire basé sur des fonctions et des structs",
-        ],
-        highlights: [
-          "Solides bases en programmation C et en logique bas niveau",
-          "Stockage persistant implémenté avec des entrées/sorties fichier",
-          "Système CRUD complet en C pur",
-        ],
-      },
-      {
-        title: "Millennium Palace — Système de gestion de restaurant",
-        description:
-          "Système de gestion de restaurant full‑stack développé en PHP, HTML, CSS et MySQL : gestion du menu, prise de commandes, attribution des tables, facturation et administration.",
-        tech: ["PHP", "HTML", "CSS", "MySQL", "XAMPP", "phpMyAdmin"],
-        github: "https://github.com/aviTD27/2012319_Millenium_Palace",
-        features: [
-          "Affichage dynamique du menu par catégories et prix",
-          "Prise de commande avec calcul automatique du total",
-          "Attribution et suivi de la disponibilité des tables",
-          "Panneau d’administration pour gérer les plats et catégories",
-          "Facturation avec reçus détaillés et calcul des taxes",
-        ],
-        highlights: [
-          "Workflow de restaurant complet basé sur le CRUD",
-          "Logique backend implémentée en PHP et MySQL",
-          "Schéma de base de données conçu pour des opérations réelles de restaurant",
-        ],
-      },
-      {
         title: "Application mobile — Développement Android",
         description:
           "Application Android multi‑écrans développée en Java et XML, couvrant activités, intents, mises en page, gestion de formulaires et navigation.",
@@ -664,6 +608,13 @@ const fr: Translation = {
           "Application des principes fondamentaux du développement Android",
           "Expérience pratique avec Java et le SDK Android",
         ],
+      },
+      {
+        title: "Mother’s Day App — Application React",
+        description:
+          "Petite application React célébrant la fête des mères : un message personnalisé dans une mise en page centrée et épurée, aux couleurs douces.",
+        tech: ["React", "JavaScript", "CSS"],
+        github: "https://github.com/aviTD27/Mother_Day_App",
       },
     ],
   },

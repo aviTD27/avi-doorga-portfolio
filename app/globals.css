@@ -2,36 +2,96 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Neon glow utilities */
-.neon-border {
-  border: 1px solid rgba(56, 189, 248, 0.4);
-  box-shadow:
-    0 0 12px rgba(56, 189, 248, 0.25),
-    inset 0 0 12px rgba(56, 189, 248, 0.15);
+body {
+  background-color: #060a14;
+  background-image:
+    radial-gradient(60rem 40rem at 85% -10%, rgba(56, 189, 248, 0.12), transparent 60%),
+    radial-gradient(50rem 40rem at -10% 20%, rgba(139, 92, 246, 0.10), transparent 60%);
+  background-attachment: fixed;
 }
 
-.neon-border-hover:hover {
-  border-color: #38bdf8;
-  box-shadow:
-    0 0 22px rgba(56, 189, 248, 0.55),
-    inset 0 0 22px rgba(56, 189, 248, 0.35);
-  transform: translateY(-6px);
-  transition: 0.25s ease;
+/* Subtle dotted grid overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(148, 163, 184, 0.12) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: linear-gradient(to bottom, black, transparent 70%);
+  -webkit-mask-image: linear-gradient(to bottom, black, transparent 70%);
 }
 
-/* Glass effect */
+/* Header / footer surface */
 .glass {
-  background: rgba(15, 23, 42, 0.6);
-  backdrop-filter: blur(10px);
+  background: rgba(8, 13, 26, 0.7);
+  backdrop-filter: blur(14px);
 }
 
-/* Section title glow */
+/* Cards: calm by default, accent on hover */
+.card {
+  background: linear-gradient(180deg, rgba(30, 41, 59, 0.45), rgba(15, 23, 42, 0.45));
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  border-radius: 1rem;
+  transition:
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.card-hover:hover {
+  border-color: rgba(56, 189, 248, 0.5);
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px -18px rgba(56, 189, 248, 0.35);
+}
+
+/* Gradient text for accents */
+.gradient-text {
+  background: linear-gradient(90deg, #67e8f9, #38bdf8 45%, #a78bfa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Section heading with accent bar */
 .section-title {
-  color: #38bdf8;
-  text-shadow: 0 0 12px rgba(56, 189, 248, 0.8);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #f1f5f9;
+  letter-spacing: -0.02em;
+}
+
+.section-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(56, 189, 248, 0.45), transparent);
+}
+
+/* Tech chips */
+.chip {
+  padding: 0.25rem 0.65rem;
+  font-size: 0.75rem;
+  border-radius: 9999px;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  color: #7dd3fc;
+}
+
+/* Collapsible details */
+details > summary {
+  list-style: none;
+  cursor: pointer;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details[open] .chevron {
+  transform: rotate(180deg);
 }

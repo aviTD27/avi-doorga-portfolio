@@ -18,7 +18,7 @@ export default function Header() {
   const languages: Lang[] = ["en", "fr"];
 
   return (
-    <header className="fixed top-0 left-0 w-full h-16 z-50 glass backdrop-blur-md border-b border-cyan-400/20 flex items-center justify-between gap-4 px-4 md:px-8">
+    <header className="fixed top-0 left-0 w-full h-16 z-50 glass border-b border-slate-800 flex items-center justify-between gap-4 px-4 md:px-8">
       {/* Logo */}
       <a
         href="#hero"

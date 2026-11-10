@@ -7,7 +7,7 @@ import { useLanguage } from "./LanguageProvider";
 function renderHighlighted(text: string) {
   return text.split("**").map((part, i) =>
     i % 2 === 1 ? (
-      <span key={i} className="text-cyan-300">
+      <span key={i} className="text-cyan-300 font-medium">
         {part}
       </span>
     ) : (
@@ -27,7 +27,7 @@ export default function About() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="text-3xl font-bold section-title mb-8"
+        className="text-3xl md:text-4xl font-bold section-title mb-10"
       >
         {t.about.title}
       </motion.h2>
@@ -38,7 +38,7 @@ export default function About() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
         viewport={{ once: true }}
-        className="glass neon-border p-8 rounded-xl max-w-3xl mx-auto"
+        className="card p-8 md:p-10 border-l-2 border-l-cyan-400"
       >
         {t.about.paragraphs.map((paragraph, i) => {
           const isFirst = i === 0;

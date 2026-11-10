@@ -8,58 +8,55 @@ export default function Experiences() {
 
   return (
     <section id="experience" className="scroll-mt-24">
-      {/* Section Title */}
       <motion.h2
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="text-3xl font-bold section-title mb-6"
+        className="text-3xl md:text-4xl font-bold section-title mb-10"
       >
         {t.experience.title}
       </motion.h2>
 
-      {/* Experience Cards */}
-      <div className="grid md:grid-cols-2 gap-8">
+      {/* Timeline */}
+      <div className="relative border-l border-slate-800 ml-2 space-y-8">
         {t.experience.items.map((exp, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
+            initial={{ opacity: 0, x: -15 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            whileHover={{ scale: 1.03 }}
-            className="glass neon-border neon-border-hover p-6 rounded-xl transition-all duration-300"
+            className="relative pl-8"
           >
-            <h3 className="text-xl font-semibold text-white mb-1">{exp.role}</h3>
-            <p className="text-cyan-300 font-medium mb-2">{exp.company}</p>
+            <span className="absolute -left-[7px] top-2 h-3.5 w-3.5 rounded-full bg-cyan-400 ring-4 ring-slate-950 shadow-[0_0_12px_rgba(56,189,248,0.8)]" />
 
-            <p className="text-slate-400 text-sm mb-4">
-              {exp.period} • {exp.location}
-            </p>
+            <div className="card p-6">
+              <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 mb-3">
+                <div>
+                  <h3 className="text-xl font-semibold text-white">{exp.role}</h3>
+                  <p className="text-cyan-300 font-medium">{exp.company}</p>
+                </div>
+                <p className="text-slate-500 text-sm">
+                  {exp.period} • {exp.location}
+                </p>
+              </div>
 
-            <p className="text-slate-400 mb-4">{exp.description}</p>
+              <p className="text-slate-400 leading-relaxed mb-4">{exp.description}</p>
 
-            <div className="flex flex-wrap gap-2 mb-4">
-              {exp.tech.map((tech, i) => (
-                <span
-                  key={i}
-                  className="px-3 py-1 text-xs rounded-md bg-cyan-500/10 border border-cyan-400/30 text-cyan-300"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-
-            <div>
-              <h4 className="text-cyan-300 font-semibold mb-2">
-                {t.experience.responsibilitiesLabel}
-              </h4>
-              <ul className="list-disc list-inside text-slate-400 space-y-1">
+              <ul className="list-disc pl-5 text-slate-400 space-y-1 mb-4">
                 {exp.responsibilities.map((r, i) => (
                   <li key={i}>{r}</li>
                 ))}
               </ul>
+
+              <div className="flex flex-wrap gap-2">
+                {exp.tech.map((tech, i) => (
+                  <span key={i} className="chip">
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
           </motion.div>
         ))}
